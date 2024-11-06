@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Introduction to list and link in html</title>
         <style>
-            ul.bg-arrow-list {
+            ul.arrow-list {
             list-style-type: none;
-            padding-left: 20px;
+            padding-left: 0;
         }
-        ul.bg-arrow-list li {
-            background-image: url('271226.png'); /* Replace with the URL of your arrow image */
-            background-size: 12px 12px;
-            background-repeat: no-repeat;
-            background-position: 0 50%;
-            padding-left: 20px;
+        ul.arrow-list li::before {
+            content: "➔"; /* Unicode character for arrow */
+            color: #333;
+            font-size: 1.2em;
+            margin-right: 10px;
         }
         </style>
     </head>
@@ -34,30 +33,17 @@
             <li>This is sixth item of the unordered list</li>
         </ul>
 </div>   
-<br> 
-<div style="border: 3px solid rgb(3, 247, 60);"> 
-    <h3>Unordered list using  bg-arrow-list as a class</h3> 
-<ul class="bg-arrow-list">
-    <li>This is first item of the unordered list</li>
-    <li>This is second item of the unordered list</li>
-    <li>This is third item of the unordered list</li>
-    <li>This is forth item of the unordered list</li>
-    <li>This is fifth item of the unordered list</li>
-    <li>This is sixth item of the unordered list</li>
-</ul>
+<br>     
 
-
-</div> 
-<br>
 <div style="border: 3px solid rgb(168, 27, 100);">
-    <h3>unordered list using arrow Unicode</h3>
-    <ul style="list-style-type: none;">
-        <li>&#10132;This is first item of the unordered list</li>
-        <li>&#10132;This is second item of the unordered list</li>
-        <li>&#10132;This is third item of the unordered list</li>
-        <li>&#10132;This is forth item of the unordered list</li>
-        <li>&#10132;This is fifth item of the unordered list</li>
-        <li>&#10132;This is sixth item of the unordered list</li>
+    <h3>unordered list using arrow</h3>
+    <ul class="arrow list">
+        <li>This is first item of the unordered list</li>
+        <li>This is second item of the unordered list</li>
+        <li>This is third item of the unordered list</li>
+        <li>This is forth item of the unordered list</li>
+        <li>This is fifth item of the unordered list</li>
+        <li>This is sixth item of the unordered list</li>
     </ul>
 </div>        
 <br>
